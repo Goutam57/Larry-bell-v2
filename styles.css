@@ -125,3 +125,18 @@ footer .ft-c a{display:block;padding:.32rem 0;color:#D5DFEC;text-decoration:none
 .ft-s{padding:1.6rem 0;border-top:1px solid rgba(255,255,255,.14);display:flex;flex-wrap:wrap;align-items:center;gap:1rem 1.4rem}.ft-s strong{font:700 .78rem Poppins;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2)}
 footer .tags{display:flex;flex-wrap:wrap;gap:.6rem}footer .tags span{display:inline-flex;padding:.35rem 1rem;border:1px solid rgba(230,203,134,.55);border-radius:999px;font:600 .85rem Poppins;color:#fff;background:rgba(255,255,255,.05)}
 .ft-b{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.8rem 1.5rem;border-top:1px solid rgba(255,255,255,.14);padding-top:1.4rem;font-size:.9rem;color:#C4D0E0}footer .ft-b a{display:inline-flex;align-items:center;min-height:44px;color:var(--gold2);font-weight:600;text-decoration:none}footer .ft-b a:hover{color:#fff}
+
+/* v11: mobile menu items + no sideways overflow on phones */
+html{overflow-x:hidden;width:100%}body{overflow-x:hidden;width:100%;position:relative}
+.panel{visibility:hidden;transition:transform .45s var(--e),visibility 0s .45s}.panel.open{visibility:visible;transition:transform .45s var(--e),visibility 0s}
+.panel.open .pgb,.panel.open .pl>a{opacity:1;transform:none}.pl>a,.pgb{text-decoration:none;color:#fff}.pl>a:hover,.pgb:hover{color:var(--gold2)}
+.pl>a.act{color:var(--gold2);border-left:3px solid var(--gold);padding-left:.8rem}
+img,svg,video,iframe{max-width:100%}h1,h2,h3,h4,p,li,a,span{overflow-wrap:break-word}
+.btns .btn,.card .btn{white-space:normal;text-align:center;line-height:1.25}
+.bk{white-space:nowrap}
+.hx-g>*{min-width:0}.hx .btn{white-space:normal;text-align:center;line-height:1.25}
+@media(max-width:999px){.hx-g{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:899px){.sp2,.bng,.imp-h{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:759px){.gx,.step{grid-template-columns:minmax(0,1fr)}.btn{white-space:normal;text-align:center;line-height:1.25}.bk{white-space:nowrap}}
+@media(max-width:639px){.bgrid{grid-template-columns:minmax(0,1fr)}.pgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.fg{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:599px){.wrap{width:calc(100% - 2rem)}.hx-g{width:calc(100% - 2rem)}.sec{padding:48px 0}.qb,.ctab{padding:52px 0}.hx-st>div{padding:0 .4rem}.hx-st span{font-size:.76rem}.exc,.card,.wk,.qt,.news{padding:1.4rem}.pic,.bni{max-width:100%}.hx .bt .btn,.btns .btn{width:100%}}
